@@ -12,13 +12,12 @@ After you see the webpack compilation succeed (the `npm run webpack` step), open
 
 **For more elaborate ReasonReact examples**, please see https://github.com/reasonml-community/reason-react-example
 
-## Build for Production
+User Story
+When I launch the app in a browser
+Then I should see the web page with message = "Hello, Reason React!"
 
-```sh
-npm run build
-npm run webpack:production
-```
-
-This will replace the development artifact `build/Index.js` for an optimized version.
-
-**To enable dead code elimination**, change `bsconfig.json`'s `package-specs` `module` from `"commonjs"` to `"es6"`. Then re-run the above 2 commands. This will allow Webpack to remove unused code.
+User Story
+Given I have opened the web app in a browser
+And the page shows "Hello, Reason React!" message
+When I click on the message
+Then the console log shows a log with text = "Clicked, HelloMsg!" 
